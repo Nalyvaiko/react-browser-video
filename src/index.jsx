@@ -16,6 +16,7 @@ class App extends Component {
             selectedVideo: null
         };
 
+        this.videoSearch = ::this.videoSearch;
         this.videoSearch();
     }
 
@@ -29,7 +30,7 @@ class App extends Component {
     }
 
     render() {
-        const videoSearch = _.debounce(::this.videoSearch, 300);
+        const videoSearch = _.debounce(this.videoSearch, 300);
 
         return (
             <div>
